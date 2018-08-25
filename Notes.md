@@ -1,4 +1,4 @@
-# Babel,React
+# Notes
 
 - *JS _class declarations_ are _not hoisted_, _function declarations_ are*
   - Class expression is another way of declaring classes. The name of a class can be accessed on the class's _name_ property
@@ -31,6 +31,10 @@
 
   - _Static Methods_ - *static* keyword, can be called without instantiating classes and can't accessed through instance
     - best used for util functions of a class like [so](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Static_methods)
+
+- A CSS reset makes sure all browsers start form the same place, style wise. every browser has its own default styles.
+
+## Babel,React
 
 - src/app.js
 

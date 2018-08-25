@@ -17,7 +17,7 @@ module.exports = {
                 'css-loader',
                 'sass-loader'
             ],
-            test: /\.scss$/
+            test: /\.s?css$/
         }]
     },
     devtool: 'cheap-module-eval-source-map',
