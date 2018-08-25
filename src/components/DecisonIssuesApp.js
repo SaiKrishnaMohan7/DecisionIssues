@@ -4,22 +4,30 @@ import AddOptions from './AddOptions';
 import Options from './Options';
 import Action from './Action';
 import Header from './Header';
+import OptionModal from './OptionModal';
 
 export default class DecisionIssues extends React.Component{
 
     state = {
-        options: []
+        options: [],
+        selectedOption: undefined
     };
 
+    // Custom Event Handlers
 	removeAll = () => {
 		this.setState(() => ({options: []}));
 	};
 
 	makeADecision = () => {
 		const randomNum = Math.floor(Math.random() * this.state.options.length);
-    	const option = this.state.options[randomNum];
-    	alert(option);
-	};
+        const option = this.state.options[randomNum];
+
+        this.setState(() => ({selectedOption: option}));
+    };
+    
+    clearSelectedOption = () => {
+        this.setState(() => ({selectedOption: undefined}))
+    };
 
 	addOption = (option) => {
 		if(!option){
@@ -38,7 +46,8 @@ export default class DecisionIssues extends React.Component{
 				options: prevState.options.filter((option) => option !== item)
 			};
 		});
-	};
+    };
+    // Custom Event Handlers - End
 
     componentDidMount() {
 		// To work around illegal data
@@ -77,6 +86,10 @@ export default class DecisionIssues extends React.Component{
 					removeItem={this.removeItem}
 				/>
                 <AddOptions addOption={this.addOption}/>
+                <OptionModal
+                    selectedOption={this.state.selectedOption}
+                    clearSelectedOption={this.clearSelectedOption}
+                    />
             </div>
         );
     }

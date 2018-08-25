@@ -6,6 +6,7 @@ A react app to help me understand React and how much it simplifies life at the f
 
 - React
 - React DOM
+- React Modal
 - yarn
 - babel
   - cli
