@@ -74,23 +74,25 @@ export default class DecisionIssues extends React.Component{
     render(){
         const subTitle = 'Mellenials! Let A computer decide for you';
         return (
-            <div>
-                <Header subTitle={subTitle}/>
-				<Action 
-					hasOptions={this.state.options.length > 0}
-					makeADecision={this.makeADecision}
-				/>
-				<Options
-					removeAll={this.removeAll}
-					options={this.state.options}
-					removeItem={this.removeItem}
-				/>
-                <AddOptions addOption={this.addOption}/>
-                <OptionModal
-                    selectedOption={this.state.selectedOption}
-                    clearSelectedOption={this.clearSelectedOption}
-                    />
-            </div>
+			<div>
+			<Header subTitle={subTitle}/>
+				<div className="container">
+					<Action 
+						hasOptions={this.state.options.length > 0}
+						makeADecision={this.makeADecision}
+					/>
+					<Options
+						removeAll={this.removeAll}
+						options={this.state.options}
+						removeItem={this.removeItem}
+					/>
+					<AddOptions addOption={this.addOption}/>
+				</div>
+				<OptionModal
+						selectedOption={this.state.selectedOption}
+						clearSelectedOption={this.clearSelectedOption}
+						/>
+			</div>
         );
     }
 }
