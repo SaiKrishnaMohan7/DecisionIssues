@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 
 const OptionModal = (props) => {
     // onRequestClose to exit modal with click/esc key
+    // Could use implicit return
     return (
         <Modal
         isOpen={!!props.selectedOption}

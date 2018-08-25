@@ -144,6 +144,8 @@
 - Solves the issue of clouding global object
 - Helps with splitting front-end code into modules
 - Webpack restart everytime change to config
+- For letting webpack know that it has to use babel it has to be told that via the module object in the rules array as an object. See webpack.config.js for idea.
+- Same is for styles. The `use` array can be used to specify multiple loaders
   
 ### Source Maps
 
