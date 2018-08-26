@@ -8,6 +8,12 @@ A react app to help me understand React and how much it simplifies life at the f
 - React DOM
 - React Modal
 - yarn
+- Styles
+  - css-loader
+  - style-loader
+  - sass-loader
+    - node-sass
+  - normalize.css - for css reset
 - babel
   - cli
   - core

@@ -1,0 +1,20 @@
+// This _<filename>.scss is called a partial
+// 1 rem is 16px
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: $dark-blue;
+    font-family: Helvetica, Arial, Helvetica, sans-serif;
+    font-size: $m-size;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
