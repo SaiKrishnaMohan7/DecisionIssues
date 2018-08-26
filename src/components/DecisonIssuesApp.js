@@ -81,12 +81,14 @@ export default class DecisionIssues extends React.Component{
 						hasOptions={this.state.options.length > 0}
 						makeADecision={this.makeADecision}
 					/>
-					<Options
-						removeAll={this.removeAll}
-						options={this.state.options}
-						removeItem={this.removeItem}
-					/>
-					<AddOptions addOption={this.addOption}/>
+					<div className="widget">
+						<Options
+							removeAll={this.removeAll}
+							options={this.state.options}
+							removeItem={this.removeItem}
+						/>
+						<AddOptions addOption={this.addOption}/>
+					</div>
 				</div>
 				<OptionModal
 						selectedOption={this.state.selectedOption}
