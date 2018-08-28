@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A basic app using react",
   "scripts": {
-    "serve": "live-server public/",
     "build": "webpack",
     "dev-server": "webpack-dev-server"
   },
